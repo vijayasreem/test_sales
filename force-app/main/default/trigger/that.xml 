@@ -1,0 +1,21 @@
+
+<Trigger>
+    <Name>AccountHistoryTrigger</Name>
+    <Event>AccountHistoryEvent</Event>
+    <Object>Account</Object>
+    <Before>true</Before>
+    <After>false</After>
+    <Conditions>
+        <Condition>AccountId != null</Condition>
+    </Conditions>
+    <Actions>
+        <Action>
+            <Name>FetchAccountHistory</Name>
+            <Parameters>
+                <Parameter>AccountNumber</Parameter>
+            </Parameters>
+            <ReturnType>List of Dictionary</ReturnType>
+            <ErrorMessage>Account not found</ErrorMessage>
+        </Action>
+    </Actions>
+</Trigger>
